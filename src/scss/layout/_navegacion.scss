@@ -1,0 +1,36 @@
+.barra{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.navegacion{
+
+    @include tablet{
+        display: flex; //poner las a horizontalmente en tablet
+        align-items: center;  //alinar verticalmente los elementos
+    }
+
+    a{
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block; //poner las a uno sobre de otro
+        text-align: center;
+
+        @include tablet{
+            margin: 2rem;
+            font-size: 1.8rem;
+
+            &:last-of-type{
+                margin-right: 0; //elimina el margin al final
+            }
+        }
+    }
+}
