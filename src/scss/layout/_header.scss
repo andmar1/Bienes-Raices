@@ -1,4 +1,43 @@
+// si navegador no soporta webp 
+.no-webp .inicio{
+    background-image: url(../img/header.jpg);
+}
+
+// si el navegador soporta webp 
+.webp .inicio{
+    background-image: url(../img/header.webp);
+}
+
 .header{
     background-color: $grisOscuro;
     padding: 1rem 0 3rem 0;
+
+    &.inicio{
+        background-position: center center;
+        background-size: cover;
+
+        @include tablet{
+            min-height: 70rem; //altura de la imagen de inicio
+        }
+    }
+}
+
+// para el texto venta de casas exclusivas de lujo 
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet{
+        min-height: 70rem; //altura de la imagen de inicio
+    }
+
+    h1{
+        text-align: left;
+        color: $blanco;
+        font-weight: $bold;
+        line-height: 2;
+        max-width: 60rem;  //dividor de texto cuando este a 60rem
+    }
+
 }
